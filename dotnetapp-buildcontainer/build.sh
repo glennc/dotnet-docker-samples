@@ -11,7 +11,7 @@ docker create --name build-container build-image
 # Copy the contents of the /out directory out so that we can build our app image.
 docker cp build-container:/out ./out
 # Build the application image.
-docker build -t dockerapp -f ./out/Dockerfile ./out
+docker build -t dockerapp .
 
 # Cleanup
 docker rm build-container

@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:core
+FROM microsoft/dotnet:1.0.1-core
 WORKDIR /app
-COPY . .
+COPY ./out .
 ENTRYPOINT ["dotnet", "app.dll"]

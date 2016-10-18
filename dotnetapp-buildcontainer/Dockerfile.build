@@ -14,8 +14,8 @@ RUN dotnet restore
 
 # This could also be accomplished by adding your Dockerfile to your project.json so that it
 # is copied as part of publish.
-COPY Dockerfile /out/Dockerfile
+#COPY Dockerfile /out/Dockerfile
 
 # Add the rest of my source files.
 COPY . .
-RUN dotnet publish --output /out --configuration Release
+RUN dotnet publish --output /out -c Release
